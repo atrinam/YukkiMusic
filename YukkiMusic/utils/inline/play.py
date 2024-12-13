@@ -61,16 +61,58 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"PanelMarkup {videoid}|{chat_id}",
+                def panel_markup_3(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="⏮ 10 ثانیه قبل",
+                callback_data=f"ADMIN 1|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="⏭ 10 ثانیه بعد",
+                callback_data=f"ADMIN 2|{chat_id}",
             ),
         ],
         [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(
+                text="🔈 کاهش صدا",
+                callback_data=f"ADMIN Volume -10|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔊 افزایش صدا",
+                callback_data=f"ADMIN Volume +10|{chat_id}",
+            ),
         ],
-        [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
+        [
+            InlineKeyboardButton(
+                text="✨ RAINBOW PLAYER ✨",
+                callback_data="rainbow_logo",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="📥 دانلود",
+                callback_data=f"ADMIN Download|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="📊 آمار ویس چت",
+                callback_data=f"ADMIN vcstats|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="◀️",
+                callback_data=f"Pages Back|2|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔙 برگشت",
+                callback_data=f"MainMarkup {videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"Pages Forw|2|{videoid}|{chat_id}",
+            ),
+        ],
     ]
     return buttons
 
@@ -83,16 +125,58 @@ def stream_markup(_, videoid, chat_id):
             ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"PanelMarkup None|{chat_id}",
+                def panel_markup_3(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="⏮ 10 ثانیه قبل",
+                callback_data=f"ADMIN 1|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="⏭ 10 ثانیه بعد",
+                callback_data=f"ADMIN 2|{chat_id}",
             ),
         ],
         [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(
+                text="🔈 کاهش صدا",
+                callback_data=f"ADMIN Volume -10|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔊 افزایش صدا",
+                callback_data=f"ADMIN Volume +10|{chat_id}",
+            ),
         ],
-        [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
+        [
+            InlineKeyboardButton(
+                text="✨ RAINBOW PLAYER ✨",
+                callback_data="rainbow_logo",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="📥 دانلود",
+                callback_data=f"ADMIN Download|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="📊 آمار ویس چت",
+                callback_data=f"ADMIN vcstats|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="◀️",
+                callback_data=f"Pages Back|2|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔙 برگشت",
+                callback_data=f"MainMarkup {videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"Pages Forw|2|{videoid}|{chat_id}",
+            ),
+        ],
     ]
     return buttons
 
@@ -114,17 +198,57 @@ def telegram_markup_timer(_, chat_id, played, dur):
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"PanelMarkup None|{chat_id}",
+                def panel_markup_3(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="⏮ 10 ثانیه قبل",
+                callback_data=f"ADMIN 1|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="⏭ 10 ثانیه بعد",
+                callback_data=f"ADMIN 2|{chat_id}",
             ),
         ],
         [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(
+                text="🔈 کاهش صدا",
+                callback_data=f"ADMIN Volume -10|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔊 افزایش صدا",
+                callback_data=f"ADMIN Volume +10|{chat_id}",
+            ),
         ],
         [
-            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
+            InlineKeyboardButton(
+                text="✨ RAINBOW PLAYER ✨",
+                callback_data="rainbow_logo",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="📥 دانلود",
+                callback_data=f"ADMIN Download|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="📊 آمار ویس چت",
+                callback_data=f"ADMIN vcstats|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="◀️",
+                callback_data=f"Pages Back|2|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔙 برگشت",
+                callback_data=f"MainMarkup {videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"Pages Forw|2|{videoid}|{chat_id}",
+            ),
         ],
     ]
     return buttons
@@ -135,17 +259,57 @@ def telegram_markup(_, chat_id):
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"PanelMarkup None|{chat_id}",
+                def panel_markup_3(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="⏮ 10 ثانیه قبل",
+                callback_data=f"ADMIN 1|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="⏭ 10 ثانیه بعد",
+                callback_data=f"ADMIN 2|{chat_id}",
             ),
         ],
         [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(
+                text="🔈 کاهش صدا",
+                callback_data=f"ADMIN Volume -10|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔊 افزایش صدا",
+                callback_data=f"ADMIN Volume +10|{chat_id}",
+            ),
         ],
         [
-            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
+            InlineKeyboardButton(
+                text="✨ RAINBOW PLAYER ✨",
+                callback_data="rainbow_logo",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="📥 دانلود",
+                callback_data=f"ADMIN Download|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="📊 آمار ویس چت",
+                callback_data=f"ADMIN vcstats|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="◀️",
+                callback_data=f"Pages Back|2|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔙 برگشت",
+                callback_data=f"MainMarkup {videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"Pages Forw|2|{videoid}|{chat_id}",
+            ),
         ],
     ]
     return buttons
